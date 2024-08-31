@@ -1,0 +1,50 @@
+.circle{
+    height: 300px;
+    width: 300px;
+    background-color: magenta;
+    transition: all 1s 1s;
+    /* transition: property name | duration | timing-function | delay; */
+}
+
+.circle:hover{
+    background-color: cyan;
+    border-radius: 50%;
+    /* margin-left: 200px; */
+}
+
+section div{
+    height: 100px;
+    width: 100px;
+    background-color: turquoise;
+    margin: 20px 0;
+    transition: margin-left 3s;
+}
+
+section:hover div{
+    margin-left: 500px;
+}
+
+div:nth-of-type(1){
+    transition-timing-function: linear;
+}
+div:nth-of-type(2){
+    transition-timing-function: ease-in;
+}
+div:nth-of-type(3){
+    transition-timing-function: ease-out;
+}
+div:nth-of-type(4){
+    transition-timing-function: ease-in-out;
+}
+div:nth-of-type(5){
+    transition-timing-function: steps(4);
+}
+div:nth-of-type(6){
+    transition-timing-function: step-end;
+}
+div:nth-of-type(7){
+    transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+div:nth-of-type(8){
+    transition-timing-function:  cubic-bezier(0.85, 0, 0.15, 1);
+} 
