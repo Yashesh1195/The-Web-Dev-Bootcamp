@@ -129,8 +129,12 @@ p::selection{
 }
 
 button:hover{
-    background-color: cyan;
+    background-color: cyan !important;
     font-size: 100px;
+} */
+
+/* button{
+    background-color: magenta !important;
 } */
 
 /* Inline Styles > ID > Classs > Element */
