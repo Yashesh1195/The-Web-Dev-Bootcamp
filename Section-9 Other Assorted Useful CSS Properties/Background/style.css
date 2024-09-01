@@ -1,0 +1,15 @@
+section{
+    margin: 0 auto;
+    height: 600px;
+    width: 80%;
+    /* background-color: purple; */
+    background-image: url(photo-1724579242963-ea62ff1f0d72.avif);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center/10%;
+    /* background: url("photo-1724579242963-ea62ff1f0d72.avif") cover no-repeat; */
+}
+
+h1{
+    color: white;
+}
