@@ -13,14 +13,28 @@ h1{
     background-color: #003049;
     border: 5px solid #003049;
     display: flex;
+    /* flex-direction: row; */
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: flex-start; */
+    align-items: flex-end;
+    /* align-content: center; */
 }
 
 #container div{
     height: 200px;
     width: 200px;
     text-align: center;
+}
+
+/* #container div:nth-of-type(2){
+    align-self: center;
+}
+#container div:nth-of-type(3){
+    align-self: flex-end;
+} */
+
+#container div:nth-of-type(5){
+    align-self: flex-start;
 }
