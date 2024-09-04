@@ -10,7 +10,9 @@
 
     <div class="container-xl">
         <h1 class="display-1 text-center text-primary">Bootstrap Playground</h1>
-        <h2 class="display-4">Buttons</h2>
+        <!-- Instead of badge-success, According to BS5, write:- text-success/bg-success/text-bg-success -->
+        <!-- Instead of .badge-pill, write, rounded-pill -->
+        <h2 class="display-4">Buttons <span class="badge rounded-pill text-bg-success">7 Notifications</span></h2>
         <button type="button" class="btn btn-outline-primary">Primary</button>
         <button type="button" class="btn btn-secondary">Secondary</button>
         <button type="button" class="btn btn-outline-success disabled">Success</button>
@@ -20,10 +22,27 @@
         <button type="button" class="btn btn-light">Light</button>
         <button type="button" class="btn btn-dark btn-sm">Dark</button>
         <button type="button" class="btn btn-link">Link</button>
+        <button type="button" class="btn btn-primary">Updates <span class="badge text-bg-light">9</span></button>
+        <h3>Button Groups</h3>
+        <div class="btn-group">
+            <button class="btn btn-warning">One</button>
+            <button class="btn btn-warning">Two</button>
+            <button class="btn btn-warning">Three</button>
+            <button class="btn btn-outline-danger">Four</button>
+            <button class="btn btn-info">Five</button>
+            <button class="btn btn-primary">Six</button>
+        </div>
+        <h3>Alerts</h3>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <h4 class="alert-heading">Oh No!!</h4>
+            Danger!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, unde.!!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <h2 class="display-4">Typography</h2>
         <p class="lead">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit beatae doloribus maxime velit cumque? Alias eveniet minima quos nulla repudiandae doloribus ducimus magni architecto omnis fugiat. Cum fuga amet dolor voluptates earum, numquam aliquid aperiam voluptatem incidunt nihil fugit perferendis!
         </p>
+        <!-- Instead of .text-right , According to BS5, write .text-end -->
         <blockquote class="blockquote text-end bg-info">
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos excepturi voluptatem dicta, sint inventore cumque laudantium vero sed voluptas obcaecati in suscipit eos quibusdam distinctio odit est delectus omnis pariatur!
