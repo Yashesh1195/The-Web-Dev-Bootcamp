@@ -28,7 +28,12 @@
 //     console.log(i);
 // }
 
-for(i=10; i <= 1000; i *= 10)
+// for(i=10; i <= 1000; i *= 10)
+// {
+//     console.log(i);
+// }
+
+for(let i = 20; i <= 30; i++)
 {
     console.log(i);
 }
