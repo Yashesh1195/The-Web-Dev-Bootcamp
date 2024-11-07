@@ -33,7 +33,36 @@
 //     console.log(i);
 // }
 
-for(let i = 20; i <= 30; i++)
+// for(let i = 20; i <= 30; i++)
+// {
+//     console.log(i);
+// }
+
+// const animals = ["lions", "tigers", "bears"];
+
+// for(let i = 0; i<=animals.length; i++)
+// {
+//     console.log(i, animals[i]);
+// }
+
+const animals = ["Elephant", "Tiger", "Lion", "Giraffe", "Kangaroo", "Panda", "Zebra", "Cheetah", "Koala", "Penguin",
+"Rhinoceros", "Hippo", "Bear", "Gorilla", "Leopard", "Wolf", "Eagle", "Owl", "Falcon", "Hawk",
+"Whale", "Dolphin", "Shark", "Seal", "Octopus", "Jellyfish", "Starfish", "Crocodile", "Alligator", "Lizard",
+"Chameleon", "Snake", "Turtle", "Frog", "Toad", "Rabbit", "Squirrel", "Bat", "Rat", "Mouse",
+"Dog", "Cat", "Horse", "Cow", "Sheep", "Goat", "Pig", "Chicken", "Duck", "Turkey",
+"Penguin", "Parrot", "Peacock", "Flamingo", "Ostrich", "Swan", "Vulture", "Raven", "Crow", "Pigeon",
+"Koala", "Sloth", "Armadillo", "Anteater", "Beetle", "Ant", "Butterfly", "Moth", "Dragonfly", "Caterpillar",
+"Scorpion", "Spider", "Centipede", "Millipede", "Bee", "Wasp", "Grasshopper", "Locust", "Cricket", "Dragonfly",
+"Clownfish", "Angelfish", "Goldfish", "Betta", "Swordfish", "Tuna", "Salmon", "Trout", "Bass", "Perch",
+"Carp", "Catfish", "Barracuda", "Moray eel", "Turtle", "Shrimp", "Lobster", "Crab", "Mantis shrimp", "Clam",
+"Oyster"];
+
+// for(let i = 0; i <= animals.length-1; i++)
+// {
+//     console.log(i, animals[i]);
+// }
+
+for(let i = animals.length-1; i >= 0; i--)
 {
-    console.log(i);
+    console.log(i, animals[i]);
 }
