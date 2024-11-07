@@ -48,7 +48,7 @@ const targetNum = Math.floor(Math.random() * maximum) + 1;
 console.log(targetNum)
 
 //First Guess
-let guess = parseInt(prompt("Enter your first guess!"));
+let guess = prompt("Enter your first guess!(Type 'q' to quit the game)");
 
 //Initialization of the number of attempts
 let attempts = 1;
@@ -59,15 +59,19 @@ while(parseInt(guess) !== targetNum)
     {
         break;
     }
-
-    attempts++;
+    guess = parseInt(guess);
     
     if(guess > targetNum){
-        // guess = parseInt(prompt("Too high! Enter New Guess:"));
         guess = prompt("Too high! Enter New Guess:");
+        attempts++;
+
+    }
+    else if(guess < targetNum){
+        guess = prompt("Too low! Enter New Guess:");
+        attempts++;
     }
     else{
-        guess = prompt("Too low! Enter New Guess:");
+        guess = prompt("Invalid Guess!! Pleease enter a number or 'q' to quit!!");
     }
 }
 if(guess === 'q')
