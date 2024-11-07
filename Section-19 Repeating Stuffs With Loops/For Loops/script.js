@@ -45,24 +45,49 @@
 //     console.log(i, animals[i]);
 // }
 
-const animals = ["Elephant", "Tiger", "Lion", "Giraffe", "Kangaroo", "Panda", "Zebra", "Cheetah", "Koala", "Penguin",
-"Rhinoceros", "Hippo", "Bear", "Gorilla", "Leopard", "Wolf", "Eagle", "Owl", "Falcon", "Hawk",
-"Whale", "Dolphin", "Shark", "Seal", "Octopus", "Jellyfish", "Starfish", "Crocodile", "Alligator", "Lizard",
-"Chameleon", "Snake", "Turtle", "Frog", "Toad", "Rabbit", "Squirrel", "Bat", "Rat", "Mouse",
-"Dog", "Cat", "Horse", "Cow", "Sheep", "Goat", "Pig", "Chicken", "Duck", "Turkey",
-"Penguin", "Parrot", "Peacock", "Flamingo", "Ostrich", "Swan", "Vulture", "Raven", "Crow", "Pigeon",
-"Koala", "Sloth", "Armadillo", "Anteater", "Beetle", "Ant", "Butterfly", "Moth", "Dragonfly", "Caterpillar",
-"Scorpion", "Spider", "Centipede", "Millipede", "Bee", "Wasp", "Grasshopper", "Locust", "Cricket", "Dragonfly",
-"Clownfish", "Angelfish", "Goldfish", "Betta", "Swordfish", "Tuna", "Salmon", "Trout", "Bass", "Perch",
-"Carp", "Catfish", "Barracuda", "Moray eel", "Turtle", "Shrimp", "Lobster", "Crab", "Mantis shrimp", "Clam",
-"Oyster"];
+// const animals = ["Elephant", "Tiger", "Lion", "Giraffe", "Kangaroo", "Panda", "Zebra", "Cheetah", "Koala", "Penguin",
+// "Rhinoceros", "Hippo", "Bear", "Gorilla", "Leopard", "Wolf", "Eagle", "Owl", "Falcon", "Hawk",
+// "Whale", "Dolphin", "Shark", "Seal", "Octopus", "Jellyfish", "Starfish", "Crocodile", "Alligator", "Lizard",
+// "Chameleon", "Snake", "Turtle", "Frog", "Toad", "Rabbit", "Squirrel", "Bat", "Rat", "Mouse",
+// "Dog", "Cat", "Horse", "Cow", "Sheep", "Goat", "Pig", "Chicken", "Duck", "Turkey",
+// "Penguin", "Parrot", "Peacock", "Flamingo", "Ostrich", "Swan", "Vulture", "Raven", "Crow", "Pigeon",
+// "Koala", "Sloth", "Armadillo", "Anteater", "Beetle", "Ant", "Butterfly", "Moth", "Dragonfly", "Caterpillar",
+// "Scorpion", "Spider", "Centipede", "Millipede", "Bee", "Wasp", "Grasshopper", "Locust", "Cricket", "Dragonfly",
+// "Clownfish", "Angelfish", "Goldfish", "Betta", "Swordfish", "Tuna", "Salmon", "Trout", "Bass", "Perch",
+// "Carp", "Catfish", "Barracuda", "Moray eel", "Turtle", "Shrimp", "Lobster", "Crab", "Mantis shrimp", "Clam",
+// "Oyster"];
 
 // for(let i = 0; i <= animals.length-1; i++)
 // {
 //     console.log(i, animals[i]);
 // }
 
-for(let i = animals.length-1; i >= 0; i--)
+// for(let i = animals.length-1; i >= 0; i--)
+// {
+//     console.log(i, animals[i]);
+// }
+
+// for(let i = 1; i<=10; i++)
+// {
+//     console.log(`i is: ${i}`);
+//     for(let j = 1; j<4; j++)
+//     {
+//         console.log(`         j is: ${j}`);
+//     }
+// }
+
+const seatingChart = [
+    ['ABC', 'DEF', 'GHI'],
+    ['JKL', 'MNO', 'PQR'],
+    ['STU', 'VWX', 'YZ']
+];
+
+for(let i = 0; i<=seatingChart.length; i++)
 {
-    console.log(i, animals[i]);
+    const row = seatingChart[i];
+    console.log(`ROW #${i}`);
+    for(let j = 0; j<row.length; j++)
+    {
+        console.log(row[j]);
+    }
 }
