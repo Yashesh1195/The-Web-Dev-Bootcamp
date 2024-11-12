@@ -1,3 +1,7 @@
+// The forEach() method calls a function for each element in an array.
+
+// The forEach() method is not executed for empty elements.
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 // function print(elements){
