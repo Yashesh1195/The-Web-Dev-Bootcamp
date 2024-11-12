@@ -1,3 +1,9 @@
+// The filter() method creates a new array filled with elements that pass a test provided by a function.
+
+// The filter() method does not execute the function for empty elements.
+
+// The filter() method does not change the original array.
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 numbers.filter(n => {
