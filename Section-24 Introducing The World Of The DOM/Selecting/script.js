@@ -30,3 +30,11 @@
 // document.querySelectorAll();
 //=============================
 
+// const query = document.querySelector('p');
+const query = document.querySelectorAll('p, a');
+
+const links = document.querySelectorAll('p a');
+
+for(let link of links){
+    console.log(link.href);
+}
