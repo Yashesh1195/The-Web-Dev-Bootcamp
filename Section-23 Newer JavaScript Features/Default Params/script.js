@@ -14,7 +14,7 @@
 // ============
 
 function rollDie(numSides = 6){
-    return Math.floor(Math.random()*numSides) + 1;
+    return Math.floor(Math.random() * numSides) + 1;
 }
 
 function product(a, b=1){
