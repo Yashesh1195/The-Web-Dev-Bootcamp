@@ -7,6 +7,8 @@ const randomColor = () => {
 
 function colorize() {
     this.style.backgroundColor = randomColor();
+    this.style.color = randomColor();
+    this.style.transform = 'scale(1.2)';
 }
 
 const buttons = document.querySelectorAll('button');
