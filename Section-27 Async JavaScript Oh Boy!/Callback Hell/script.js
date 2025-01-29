@@ -26,7 +26,9 @@ delayedColorChange("olive", 1000, () => {
         delayedColorChange("magenta", 1000, () => {
             delayedColorChange("lightblue", 1000, () => {
                 delayedColorChange("red", 1000, () => {
-        
+                    delayedColorChange("teal", 1000, () => {
+
+                    })
                 })
             })
         })
@@ -41,5 +43,5 @@ searchMoviesAPI('amadeus', () => {
         //If it doesn't work, run this
     })
 }, () => {
-    //If API id down, or request failed
+    //If API is down, or request failed
 })
