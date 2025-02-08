@@ -14,7 +14,7 @@ try {
     console.log(res.data.result.properties);
 }
 catch(e) {
-    console.log("ERROR!");
+    console.log("ERROR!", e);
 }
 };
 
