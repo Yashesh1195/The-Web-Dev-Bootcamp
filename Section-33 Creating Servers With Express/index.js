@@ -10,13 +10,24 @@ const app = express();
 //     res.send('<h1>This is my webpage!</h1>');
 // });
 
+
+// Basic Routing
 // /cats = 'meow'
 // /dogs = 'woof'
 // / = 'Welcome To Our Home Page!'
 
+app.get('/', (req, res) => {
+    res.send("This is the Home Page!!!");
+})
+
 app.get('/cats', (req, res) => {
     // console.log("CAT REQUEST!!!");
     res.send("MEOW!!!");
+})
+
+app.post('/cats', (req, res) => {
+    // console.log("CAT REQUEST!!!");
+    res.send("SENDING POST REQUEST TO CATS! MEOW MEOW!!!");
 })
 
 app.get('/dogs', (req, res) => {
@@ -24,8 +35,8 @@ app.get('/dogs', (req, res) => {
     res.send("WOOFF!!!");
 })
 
-app.get('/', (req, res) => {
-    res.send("This is the Home Page!!!");
+app.get('*', (req, res) => {
+    res.send("I don't know the route to that path!!");
 })
 
 
