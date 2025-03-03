@@ -25,6 +25,20 @@ app.get('/cats', (req, res) => {
     res.send("MEOW!!!");
 })
 
+// /r/SOMETHINGHERE
+
+app.get('/r/:subreddit', (req, res) => {
+    // console.log(req.params);
+    // res.send("THIS IS A SUBREDDIT");
+    const { subreddit } = req.params;
+    res.send(`<h1>Browsing the ${subreddit} subreddit</h1>`);
+})
+
+app.get('/r/:subreddit/:postId', (req, res) => {
+    const { subreddit, postId } = req.params;
+    res.send(`<h1>Viewing the Post ID: ${postId} on the ${subreddit} subreddit</h1>`);
+})
+
 app.post('/cats', (req, res) => {
     // console.log("CAT REQUEST!!!");
     res.send("SENDING POST REQUEST TO CATS! MEOW MEOW!!!");
@@ -38,7 +52,6 @@ app.get('/dogs', (req, res) => {
 app.get('*', (req, res) => {
     res.send("I don't know the route to that path!!");
 })
-
 
 app.listen(8080, () => {
     console.log("LISTENING ON PORT 8080!");
