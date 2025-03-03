@@ -17,12 +17,8 @@ const app = express();
 // / = 'Welcome To Our Home Page!'
 
 app.get('/', (req, res) => {
-    res.send("This is the Home Page!!!");
-})
-
-app.get('/cats', (req, res) => {
-    // console.log("CAT REQUEST!!!");
-    res.send("MEOW!!!");
+    // res.send("This is the Home Page!!!");
+    res.send("Welcome to the Home Page!!!");
 })
 
 // /r/SOMETHINGHERE
@@ -39,6 +35,11 @@ app.get('/r/:subreddit/:postId', (req, res) => {
     res.send(`<h1>Viewing the Post ID: ${postId} on the ${subreddit} subreddit</h1>`);
 })
 
+app.get('/cats', (req, res) => {
+    // console.log("CAT REQUEST!!!");
+    res.send("MEOW!!!");
+})
+
 app.post('/cats', (req, res) => {
     // console.log("CAT REQUEST!!!");
     res.send("SENDING POST REQUEST TO CATS! MEOW MEOW!!!");
@@ -47,6 +48,17 @@ app.post('/cats', (req, res) => {
 app.get('/dogs', (req, res) => {
     // console.log("DOG REQUEST!!!");
     res.send("WOOFF!!!");
+})
+
+app.get('/search', (req, res) => {
+    // console.log(req.query);
+    const { q } = req.query;
+    if(!q) {
+        res.send("NOTHING FOUND IF NOTHING SEARCHED");
+    }
+    else {
+        res.send(`<h1>Search results for: ${q}</h1>`);
+    }
 })
 
 app.get('*', (req, res) => {
