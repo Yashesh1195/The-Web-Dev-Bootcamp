@@ -1,39 +1,17 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const redditData = require('./data.json');
 
-app.use(express.static(path.join(__dirname, 'public')))
-
+// Assigns setting name to value. You may store any value that you want, but certain names can be used to configure the behavior of the server. 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'))
+app.set('views', path.join(__dirname, '/views'));
 
 app.get('/', (req, res) => {
-    res.render('home')
-})
-
-app.get('/cats', (req, res) => {
-    const cats = [
-        'Blue', 'Rocket', 'Monty', 'Stephanie', 'Winston'
-    ]
-    res.render('cats', { cats })
-})
-
-app.get('/r/:subreddit', (req, res) => {
-    const { subreddit } = req.params;
-    const data = redditData[subreddit];
-    if (data) {
-        res.render('subreddit', { ...data });
-    } else {
-        res.render('notfound', { subreddit })
-    }
-})
-
-app.get('/rand', (req, res) => {
-    const num = Math.floor(Math.random() * 10) + 1;
-    res.render('random', { num })
+    // res.send("HI!!!!");
+    // res.render('home.ejs');
+    res.render('home');
 })
 
 app.listen(3000, () => {
-    console.log("LISTENING ON PORT 3000")
+    console.log("LISTENING ON PORT 3000!!!");
 })
