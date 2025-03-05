@@ -1,9 +1,8 @@
 <%- include('partials/head') %>
 
-<body>
     <%- include('partials/navbar') %>
 
-    <div class="container-fluid">
+    <div class="container">
         <h1>Browsing the <%= name %> subreddit</h1>
         <h2><%= description %></h2>
         <p>Total Subscribers: <u><i><%= subscribers %></i></u></p>
@@ -17,5 +16,4 @@
             </article>
         <% } %>
     </div>
-</body>
-</html>
+    <%- include('partials/footer') %>
