@@ -12,6 +12,20 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
+//Subreddit Template Demo
+app.get('/r/:subreddit', (req, res) => {
+    const{ subreddit } = req.params;
+    res.render('subreddit', { subreddit });
+})
+
+//Passing Data To Templates
+app.get('/rand', (req, res) => {
+    const num = Math.floor(Math.random() * 10) + 1;
+    // res.render('random', {rand: num});
+    // res.render('random', {num: num});
+    res.render('random', { num });
+})
+
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000!!!");
 })
