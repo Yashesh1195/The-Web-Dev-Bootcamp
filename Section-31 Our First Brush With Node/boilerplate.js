@@ -13,12 +13,12 @@ const folderName = process.argv[2] || "Project";
 //Sync version of mkdir
 try{
     fs.mkdirSync(folderName);
-fs.writeFileSync(`${folderName}/index.html`, ' ');
-fs.writeFileSync(`${folderName}/style.css`, ' ');
-fs.writeFileSync(`${folderName}/script.js`, ' ');
+    fs.writeFileSync(`${folderName}/index.html`, ' ');
+    fs.writeFileSync(`${folderName}/style.css`, ' ');
+    fs.writeFileSync(`${folderName}/script.js`, ' ');
 }
 catch(e) {
-    console.log("Somehting went wrong!!");
+    console.log("Something went wrong!!");
     console.log(e);
 }
 console.log("I COME AFTER MKDIR IN THE FILE!!!");
