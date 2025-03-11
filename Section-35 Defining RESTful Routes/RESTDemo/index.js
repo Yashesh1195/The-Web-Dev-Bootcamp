@@ -28,8 +28,22 @@ const comments = [
   },
 ];
 
+// GET- Display all comments :- /comments
 app.get('/comments', (req, res) => {
   res.render('comments/index', { comments })
+})
+
+// GET- Form to create new comment :- /comments/new
+app.get('/comments/new', (req, res) => {
+  res.render('comments/new')
+})
+
+// POST- Creates new comment on server :- /comments 
+app.post('/comments', (req, res) => {
+  // console.log(req.body);
+  const { username, comment } = req.body;
+  comments.push({username, comment});
+  res.send("IT WORKED!!!!");
 })
 
 app.get("/tacos", (req, res) => {
