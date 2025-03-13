@@ -21,8 +21,9 @@ app.get('/cats', (req, res) => {
     const cats = [
         'Blue', 'Rocket', 'Monty', 'Stephanie', 'Winston'
     ]
-    // res.render('cats', { allCats: cats })
-    res.render('cats', { cats })
+    // res.render('cats', { allCats: cats });
+    // res.render('cats', { cats: cats });
+    res.render('cats', { cats });
 })
 
 //Subreddit Template Demo
@@ -39,6 +40,7 @@ app.get('/r/:subreddit', (req, res) => {
 })
 
 //Passing Data To Templates
+//Conditionals in EJS
 app.get('/rand', (req, res) => {
     const num = Math.floor(Math.random() * 10) + 1;
     // res.render('random', {rand: num});
