@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const redditData = require('./data.json');
 
+// To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Assigns setting name to value. You may store any value that you want, but certain names can be used to configure the behavior of the server. 
