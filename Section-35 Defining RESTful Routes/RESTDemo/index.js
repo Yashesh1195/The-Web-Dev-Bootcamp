@@ -11,39 +11,52 @@ app.set("view engine", "ejs");
 
 const comments = [
   {
+    id: 1,
     username: "todd",
     comment: "lol that is so funny",
   },
   {
+    id: 2,
     username: "Skyler",
     comment: "I like to go birdwatching with my dog",
   },
   {
+    id: 3,
     username: "Sk8erBoi",
     comment: "Plz delete your account, Todd",
   },
   {
+    id: 4,
     username: "onlysayswoof",
     comment: "woof woof woof",
   },
 ];
 
-// GET- Display all comments :- /comments
+// Index /comments :- GET- Display all comments
 app.get('/comments', (req, res) => {
   res.render('comments/index', { comments })
 })
 
-// GET- Form to create new comment :- /comments/new
+// New /comments/new :- GET- Form to create new comment 
 app.get('/comments/new', (req, res) => {
   res.render('comments/new')
 })
 
-// POST- Creates new comment on server :- /comments 
+//  Create /comments :- POST- Creates new comment on server
 app.post('/comments', (req, res) => {
   // console.log(req.body);
   const { username, comment } = req.body;
   comments.push({username, comment});
-  res.send("IT WORKED!!!!");
+  // res.send("IT WORKED!!!!");
+  res.redirect('/comments');
+})
+
+//Show /comments/:id :- Get Details for one specific comment
+app.get('/comments/:id', (req, res) => {
+  const { id } = req.params;
+  const comment = comments.find(c => c.id === parseInt(id));
+  res.render('/comments/show', {comment})
+
 })
 
 app.get("/tacos", (req, res) => {
@@ -53,6 +66,7 @@ app.get("/tacos", (req, res) => {
 app.post("/tacos", (req, res) => {
   // res.send("POST /tacos response");
   const { meat, qty } = req.body;
+  // console.log(req.body);
   res.send(`OK, Here are your ${qty} ${meat} tacos`);
 });
 
