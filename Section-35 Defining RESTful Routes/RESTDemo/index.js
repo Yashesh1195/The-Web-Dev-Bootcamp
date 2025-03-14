@@ -6,13 +6,14 @@ const path = require("path");
 app.use(express.urlencoded({ extended: true }));
 // It is a built-in middleware function in Express. It parses incoming requests with JSON payloads and it is based on body parser. 
 app.use(express.json());
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 const comments = [
   {
     id: 1,
-    username: "todd",
+    username: "Todd",
     comment: "lol that is so funny",
   },
   {
@@ -89,6 +90,6 @@ app.listen(3000, () => {
 
 // GET /comments = list all comments
 // POST /comments = Create a new comment
-// GET /comments/:id = GET one comment
+// GET /comments/:id = GET one comment (using ID)
 // PATCH /comments/:id = Update one comment
 // DELETE /comments/:id = Destroy one comment
