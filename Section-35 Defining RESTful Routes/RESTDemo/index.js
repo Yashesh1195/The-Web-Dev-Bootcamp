@@ -56,20 +56,26 @@ app.post('/comments', (req, res) => {
 app.get('/comments/:id', (req, res) => {
   const { id } = req.params;
   const comment = comments.find(c => c.id === parseInt(id));
-  res.render('/comments/show', {comment})
+  res.render('comments/show', { comment })
 
 })
 
-app.get("/tacos", (req, res) => {
-  res.send("GET /tacos response");
-});
+//Edit /comments/:id/edit :- GET Form to edit specific comment
 
-app.post("/tacos", (req, res) => {
-  // res.send("POST /tacos response");
-  const { meat, qty } = req.body;
-  // console.log(req.body);
-  res.send(`OK, Here are your ${qty} ${meat} tacos`);
-});
+//Update /comments/:id :- PATCH Updates specific comment on server
+
+//Destroy /comments/:id :- DELETE Deletes specific item on server
+
+// app.get("/tacos", (req, res) => {
+//   res.send("GET /tacos response");
+// });
+
+// app.post("/tacos", (req, res) => {
+//   // res.send("POST /tacos response");
+//   const { meat, qty } = req.body;
+//   // console.log(req.body);
+//   res.send(`OK, Here are your ${qty} ${meat} tacos`);
+// });
 
 app.listen(3000, () => {
   console.log("ON PORT 3000!");
