@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Post</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <script src="public/js/jquery.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Post ID: <%=post.id%></h1>
+    <h2>Username - <%=post.username%></h2>
+    <img src="<%= post.src %>" alt="">
+    <h2>Caption - <%=post.caption%></h2>
+    <button><a href="/posts">Back to index</a></button>
+    <button><a href="/posts/<%=post.id%>/edit">Edit Post</a></button>
+    <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+        <button>Delete Post</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <script src="public/js/jquery.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Make a new post</h1>
+    
+    <form action="/posts" method="post">
+        <section>
+            <label for="username">Enter username: </label>
+            <input type="text" id="username" name="username" placeholder="username">
+        </section>
+        <section>
+            <label for="src">Enter url: </label>
+            <br>
+            <textarea name="src" id="src" cols="20" rows="3" placeholder="src"></textarea>
+        </section>
+        <section>
+            <label for="caption">Enter caption: </label>
+            <br>
+            <textarea name="caption" id="caption" cols="20" rows="3" placeholder="caption"></textarea>
+        </section>
+        <button>Submit</button>
+    </form>
+
+    <button>
+        <a href="/posts">All Posts</a>
+    </button>
+</body>
+</html>
