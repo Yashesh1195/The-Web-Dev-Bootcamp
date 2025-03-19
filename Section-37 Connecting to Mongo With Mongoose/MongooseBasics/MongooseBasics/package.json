@@ -1,6 +1,7 @@
 {
-  "name": "section-37-connecting-to-mongo-with-mongoose",
+  "name": "MongooseBasics",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,8 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "mongoose": "^8.12.1"
+    "mongoose": "^5.10.0"
   }
 }
